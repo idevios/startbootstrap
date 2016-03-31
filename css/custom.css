@@ -3,7 +3,7 @@
   margin-bottom: 60px;
 }
 .form-group {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
 }
 .dropdown-menu {
   padding: 15px;
@@ -24,15 +24,20 @@
   background-color: #34495e;
 }
 
-@media (min-width: 768px) {
-
+@media (min-width: 1024px) {
+  .btn-reserv {
+    margin-top: 0px;
+  }
 }
-@media (min-width: 768px) {
-
+@media (max-width: 1024px) {
+  .btn-reserv {
+    margin-top: 20px;
+  }
 }
 
 
 @media (max-width: 767px) {
+
 
 }
 @media (min-width: 767px) {
