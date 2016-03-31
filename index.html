@@ -18,6 +18,9 @@
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
 
+    <!-- Datepicker CSS -->
+    <link href="css/datepicker.css" rel="stylesheet">
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -29,16 +32,50 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Datepicker -->
+    <script src="js/bootstrap-datepicker.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+        // Setup drop down menu
+        $('.dropdown-toggle').dropdown();
+
+        // Fix input element click problem
+        $('.dropdown input, .dropdown label').click(function(e) {
+          e.stopPropagation();
+        });
+      });
+    </script>
     <script type="text/javascript">
     $(function() {
-      // Setup drop down menu
-      $('.dropdown-toggle').dropdown();
+      var nowTemp = new Date();
+      var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
 
-      // Fix input element click problem
-      $('.dropdown input, .dropdown label').click(function(e) {
-        e.stopPropagation();
-});
-});
+      var checkin = $('#checkin').datepicker({
+      onRender: function(date) {
+        return date.valueOf() < now.valueOf() ? 'disabled' : '';
+      }
+      }).on('changeDate', function(ev) {
+      if (ev.date.valueOf() > checkout.date.valueOf()) {
+        var newDate = new Date(ev.date)
+        newDate.setDate(newDate.getDate() + 1);
+        checkout.setValue(newDate);
+      }
+      checkin.hide();
+      $('#checkout')[0].focus();
+      }).data('datepicker');
+      var checkout = $('#checkout').datepicker({
+      onRender: function(date) {
+        return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+      }
+      }).on('changeDate', function(ev) {
+      checkout.hide();
+      }).data('datepicker');
+    });
+
     </script>
 </head>
 
@@ -553,8 +590,7 @@
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

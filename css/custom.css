@@ -24,12 +24,12 @@
   background-color: #34495e;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   .btn-reserv {
     margin-top: 0px;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
   .btn-reserv {
     margin-top: 20px;
   }
