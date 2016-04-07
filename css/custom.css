@@ -42,16 +42,30 @@
   margin-bottom: 10px;
   height: 190px;
 }
+.room:hover {
+  background-color: #fff7e2;
+}
+
+.room-promo {
+  background-color: #ffe3e2;
+}
+.room-promo:hover {
+  background-color: #ffdcdb;
+}
 
 .room-img {
-  background-image: url('../img/deluxe-bf.jpg');
+  /*background-image: url('../img/deluxe-bf.jpg');*/
   float: left;
   background-color: #000;
-  width: 20%;
+  width: 25%;
+  height: 150px;
+}
+.room-img-tag {
+  width: 100%;
   height: 150px;
 }
 .room-detail {
-  width: 80%;
+  width: 75%;
   float: right;
 }
 .room-name {
@@ -68,7 +82,7 @@
 .room-detail-bottom {
   margin-top: 100px;
 }
-
+/* ROOM RESERV BTN */
 .room-reserv-btn {
   float: right;
   width: 150px;
@@ -87,11 +101,18 @@
   color: #f3f3f3;
   background-color: #002f5f;
 }
-
 .btn-reserv-text {
   font-size: 20px;
   text-align: center;
   line-height: 45px;
+}
+/* ROOM ADVANTAGE */
+.room-advantage {
+  float: left;
+  padding-left: 5%;
+}
+.room-advantage i {
+  margin-right: 10px;
 }
 
 @media (min-width: 991px) {
