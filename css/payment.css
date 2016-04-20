@@ -1,0 +1,139 @@
+
+.search {
+  margin-bottom: 60px;
+}
+.form-group {
+  /*margin-bottom: 20px;*/
+}
+.dropdown-menu {
+  padding: 15px;
+  padding-bottom: 10px;
+}
+.dropdown-menu input[type="text"],input[type="password"] {
+  margin-bottom: 15px;"
+}
+.dropdown-menu input[type="checkbox"] {
+  float: left;
+  margin-right: 10px;
+}
+.dropdown-menu input[type="submit"] {
+  clear: left;
+  width: 100%;
+  height: 40px;
+  font-size: 13px;
+  background-color: #34495e;
+}
+
+.signup-link {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.forgot-link {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #8696A8;
+}
+
+.room {
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+  height: 190px;
+}
+
+.room-promo {
+}
+.room-promo:hover {
+}
+
+.room-img {
+  /*background-image: url('../img/deluxe-bf.jpg');*/
+  float: left;
+  background-color: #000;
+  width: 25%;
+  height: 150px;
+}
+.room-img-tag {
+  width: 100%;
+  height: 150px;
+}
+.room-detail {
+  width: 75%;
+  float: right;
+}
+.room-name {
+  font-size: 25px;
+  padding-left: 20px;
+  float: left;
+}
+.room-price {
+  font-size: 25px;
+  padding-left: 20px;
+  float: right;
+}
+
+.room-detail-bottom {
+  margin-top: 100px;
+}
+/* ROOM RESERV BTN */
+.room-reserv-btn {
+  float: right;
+  width: 150px;
+  height: 50px;
+  border: 1px solid #183b5f;
+}
+.room-reserv-btn a {
+  text-decoration: none;
+  color: #2d3e4f;
+}
+.room-reserv-btn a:hover {
+  text-decoration: none;
+  color: #f3f3f3;
+}
+.room-reserv-btn:hover {
+  color: #f3f3f3;
+  background-color: #002f5f;
+}
+.btn-reserv-text {
+  font-size: 20px;
+  text-align: center;
+  line-height: 45px;
+}
+/* ROOM ADVANTAGE */
+.room-advantage {
+  float: left;
+  padding-left: 5%;
+}
+.room-advantage i {
+  margin-right: 10px;
+}
+
+@media (min-width: 991px) {
+  .btn-reserv {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 991px) {
+  .btn-reserv {
+    margin-top: 20px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .room-img {
+    float: left;
+    background-color: #000;
+    width: 35%;
+    height: 150px;
+  }
+  .room-detail {
+    width: 65%;
+    float: right;
+  }
+
+}
+@media (min-width: 767px) {
+
+}
