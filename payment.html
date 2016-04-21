@@ -26,6 +26,8 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,10 +45,43 @@
     <script src="js/dropdown-room.js"></script>
     <!-- Datepicker -->
     <script src="js/datepicker-ui.js"></script>
+
+    <script src="dist/sweetalert.min.js"></script>
+
 </head>
 
 <body id="page-top" class="index">
+  <script type="text/javascript">
+  function sweet(){
+    swal({
+      title: "คุณต้องการยืนยันการชำระค่าบริการหรือไม่?",
+      text: "หากชำระแล้วยอดเงินจะถูกตัดทันทีและไม่สามารถขอคืนเงินได้",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "ตกลง, ชำระค่าบริการ",
+      cancelButtonText: "ยกเลิก",
+      closeOnConfirm: false,
+      closeOnCancel: false },
+      function(isConfirm){
+        if (isConfirm) {
+          swal({
+            title: "การชำระค่าบริการเสร็จสมบูรณ์",
+            text: "ขอบคุณที่ใช้บริการ",
+            type: "success",
+            showCancelButton: false,
+            confirmButtonColor: "#CCCCCC",
+            confirmButtonText: "OK",
+            closeOnConfirm: false },
+            function(){
+              window.location="user.html" });
+        }
+        else {     swal("ยกเลิก", "คุณยังไม่ได้ชำระค่าบริการ", "error");
 
+      } });
+  }
+
+  </script>
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
@@ -210,7 +245,7 @@
                               </div>
                               <div class="row">
                                   <div class="col-xs-12">
-                                      <a href="confirm.html" style="text-decoration:none;"><button class="subscribe btn btn-success btn-lg btn-block" type="button">ชำระค่าบริการ</button></a>
+                                      <button class="subscribe btn btn-success btn-lg btn-block" type="button" onclick="sweet()">ชำระค่าบริการ</button>
                                   </div>
                               </div>
                               <div class="row" style="display:none;">
